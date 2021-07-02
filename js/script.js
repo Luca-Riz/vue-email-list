@@ -7,14 +7,16 @@ const app = new Vue(
         data: {
             mail:[]
         },
-        mounted(){
-            for(let i = 0; i < 10; i++){
 
+        mounted(){
+            // ciclo 10 volte il generatore di e-mail...
+            for(let i = 0; i < 10; i++){
                 axios
                     .get('https://flynn.boolean.careers/exercises/api/random/mail')
                     .then(result => {
+                        // ...e lo pusho nell'array "mail"
                         this.mail.push(result.data.response);
-                        console.log(this.mail);
+                        // console.log(this.mail);
                     });
             }
         },

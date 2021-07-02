@@ -15,8 +15,10 @@
     
 <div id="app">
     <h3>Lista e-mail:</h3>
+    <!-- solamente quando la lunghezza array è 10 -->
     <div v-if="mail.length == 10"> 
         <ul>
+            <!-- ciclo ogni mail dentro un li -->
             <li v-for="singleMail in mail">
                 {{ singleMail }};
             </li>
