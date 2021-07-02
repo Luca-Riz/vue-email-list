@@ -5,7 +5,8 @@ const app = new Vue(
     {
         el: '#app',
         data: {
-            mail:[]
+            mail:[],
+            num: []
         },
 
         mounted(){
@@ -18,7 +19,15 @@ const app = new Vue(
                         this.mail.push(result.data.response);
                         // console.log(this.mail);
                     });
-            }
+            };
+
+            axios
+                .get('https://flynn.boolean.careers/exercises/api/array/integers?min=1&max=10&items=10')
+                .then(arrNum => {
+                    this.num = arrNum.data.response;
+                });
+
+            
         },
     }
 );
