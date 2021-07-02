@@ -15,12 +15,13 @@
     
 <div id="app">
     <h3>Lista e-mail:</h3>
-    <!-- <div v-if="mail.length == 10"> {{mail}} </div> -->
-    <ul>
-        <li v-for="singleMail in mail">
-            {{ singleMail }};
-        </li>
-    </ul>
+    <div v-if="mail.length == 10"> 
+        <ul>
+            <li v-for="singleMail in mail">
+                {{ singleMail }};
+            </li>
+        </ul>
+    </div>
 </div>
 
 
